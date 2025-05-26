@@ -22,6 +22,7 @@ ref table LocalDateTable_983965f8-a072-4e6c-a4e1-3edc9efa5865
 ref table DimEducationLevel
 ref table DimRatingLevel
 ref table DimSatisfiedLevel
+ref table _Measures
 
 ref cultureInfo en-US
 
