@@ -16,13 +16,21 @@ annotation PBI_ProTooling = ["DevMode"]
 
 ref table DateTableTemplate_b73562fb-b75f-4898-b6a8-3f56d48e6428
 ref table DimEmployee
-ref table LocalDateTable_f652d81c-fb63-4f80-8e5e-49acec548c1e
 ref table FactPerformanceRating
-ref table LocalDateTable_983965f8-a072-4e6c-a4e1-3edc9efa5865
 ref table DimEducationLevel
 ref table DimRatingLevel
 ref table DimSatisfiedLevel
 ref table _Measures
+ref table DimDate
+ref table LocalDateTable_c74ddea0-eca1-4b31-bb09-c319bb675121
+ref table LocalDateTable_3f1b30f5-fd84-4d4a-b7ec-8c59575727ac
+ref table LocalDateTable_fcbbf00a-7ac1-4015-958f-c5a180ffbb19
+ref table LocalDateTable_c0522638-fc2b-434b-af19-27286c0315fe
+ref table LocalDateTable_dc7e2054-4e52-45dd-8b76-8d271c22a05b
+ref table LocalDateTable_30567f4a-41fe-4c11-beea-9293420c8b0f
+ref table LocalDateTable_428636ba-7841-488a-8419-7ca64b7eff61
+ref table LocalDateTable_447416c8-0883-40b8-8475-55fc203ce5d2
+ref table LocalDateTable_dec334ca-2bca-4e08-9a43-03f375c52e45
 
 ref cultureInfo en-US
 

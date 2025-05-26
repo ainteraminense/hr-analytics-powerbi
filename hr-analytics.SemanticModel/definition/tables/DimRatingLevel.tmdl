@@ -5,7 +5,7 @@ table DimRatingLevel
 		dataType: int64
 		formatString: 0
 		lineageTag: af61cec3-a0d2-43e6-afdc-0675d5f82b5b
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: RatingID
 
 		annotation SummarizationSetBy = Automatic

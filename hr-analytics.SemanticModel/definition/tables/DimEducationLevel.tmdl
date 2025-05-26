@@ -5,7 +5,7 @@ table DimEducationLevel
 		dataType: int64
 		formatString: 0
 		lineageTag: 5b41a4d1-4b77-4bb4-b640-a743b4167bfc
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: EducationLevelID
 
 		annotation SummarizationSetBy = Automatic

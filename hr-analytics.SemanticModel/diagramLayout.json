@@ -4,16 +4,17 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 625.16249999999991,
+        "x": 0,
         "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 0
+            "x": 15.625,
+            "y": 142.1875
           },
           "nodeIndex": "DimEmployee",
+          "nodeLineageTag": "112e86e4-076e-4d75-bd76-fc4820594205",
           "size": {
             "height": 300,
             "width": 234
@@ -26,8 +27,9 @@
             "y": 86
           },
           "nodeIndex": "DimEducationLevel",
+          "nodeLineageTag": "9365378b-0420-4656-b0ab-67969f84e71a",
           "size": {
-            "height": 128,
+            "height": 173.81183244810308,
             "width": 234
           },
           "zIndex": 0
@@ -46,10 +48,11 @@
         },
         {
           "location": {
-            "x": 1143.1,
-            "y": 86
+            "x": 679.4541109365307,
+            "y": 747.28582568837965
           },
           "nodeIndex": "DimSatisfiedLevel",
+          "nodeLineageTag": "574b964e-7b6c-4b81-85ce-2d3d18e4de20",
           "size": {
             "height": 128,
             "width": 234
@@ -70,10 +73,24 @@
         },
         {
           "location": {
-            "x": 1427.1,
-            "y": 242.96875
+            "x": 1095.2140734282102,
+            "y": 90.077478271295718
           },
           "nodeIndex": "_Measures",
+          "nodeLineageTag": "e62e6d88-d23c-4906-b1a1-f6e4527fa75c",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 57.974999999999909,
+            "y": 755.46875
+          },
+          "nodeIndex": "DimDate",
+          "nodeLineageTag": "1f9ac68c-071a-416b-9a45-c6bbf6efbe1a",
           "size": {
             "height": 200,
             "width": 234
@@ -82,7 +99,7 @@
         }
       ],
       "name": "All tables",
-      "zoomValue": 64,
+      "zoomValue": 80.449327557596334,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

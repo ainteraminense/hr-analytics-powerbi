@@ -87,7 +87,7 @@ table DimEmployee
 		dataType: int64
 		formatString: 0
 		lineageTag: 11c0d517-fbe1-43f3-9535-8edde4224835
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Education
 
 		annotation SummarizationSetBy = Automatic
@@ -148,11 +148,6 @@ table DimEmployee
 		lineageTag: c4e0a68b-e7a1-4a6a-9bf8-05e145b15c12
 		summarizeBy: none
 		sourceColumn: HireDate
-
-		variation Variation
-			isDefault
-			relationship: 19e50d2a-7649-441e-a9ab-f3a9eea8194f
-			defaultHierarchy: LocalDateTable_f652d81c-fb63-4f80-8e5e-49acec548c1e.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 
