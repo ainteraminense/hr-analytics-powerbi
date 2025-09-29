@@ -17,6 +17,18 @@ table _Measures
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 6b1a0761-8a17-4ecd-b269-9cf5e00a7091
 
+	measure TotalEmployeesDate =
+			
+			CALCULATE(
+			    [TotalEmployees],
+			    USERELATIONSHIP(
+			        DimEmployee[HireDate],
+			        DimDate[Date]
+			    )
+			)
+		formatString: 0
+		lineageTag: 112b54eb-a380-4dc5-8d50-fdb57f99b24a
+
 	column Column
 		formatString: 0
 		lineageTag: 1fe70466-bcf3-4f6e-9ed2-2a0f4d61103c

@@ -121,6 +121,24 @@
             }
           ]
         },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimEmployee"
+                    }
+                  },
+                  "Property": "Attrition"
+                }
+              },
+              "queryRef": "DimEmployee.Attrition",
+              "nativeQueryRef": "Attrition"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -131,12 +149,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "TotalEmployees"
+                  "Property": "TotalEmployeesDate"
                 }
               },
-              "queryRef": "_Measures.TotalEmployees",
-              "nativeQueryRef": "Total Employees",
-              "displayName": "Total Employees"
+              "queryRef": "_Measures.TotalEmployeesDate",
+              "nativeQueryRef": "TotalEmployeesDate"
             }
           ]
         }
