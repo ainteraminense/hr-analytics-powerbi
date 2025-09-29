@@ -65,7 +65,7 @@
               },
               "queryRef": "DimDate.Date.Variation.Date Hierarchy.Quarter",
               "nativeQueryRef": "Date Quarter",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -91,7 +91,7 @@
               },
               "queryRef": "DimDate.Date.Variation.Date Hierarchy.Month",
               "nativeQueryRef": "Date Month",
-              "active": true
+              "active": false
             },
             {
               "field": {
