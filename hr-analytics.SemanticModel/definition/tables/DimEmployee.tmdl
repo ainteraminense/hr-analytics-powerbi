@@ -197,15 +197,27 @@ table DimEmployee
 
 		annotation SummarizationSetBy = Automatic
 
+	column AgeBins
+		dataType: string
+		lineageTag: 36c37ad8-7039-467e-a79d-9903f55d9b44
+		summarizeBy: none
+		sourceColumn: AgeBins
+
+		annotation SummarizationSetBy = Automatic
+
 	partition DimEmployee-dc909116-9259-4343-958c-d8340731fa8f = m
 		mode: import
 		source =
 				let
 				    Source = Csv.Document(Web.Contents("https://assets.datacamp.com/production/repositories/6064/datasets/4d911570b8f76531d5a1f8be6ff19a746bd1be71/Employee.csv"),[Delimiter=",", Columns=23, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"EmployeeID", type text}, {"FirstName", type text}, {"LastName", type text}, {"Gender", type text}, {"Age", Int64.Type}, {"BusinessTravel", type text}, {"Department", type text}, {"DistanceFromHome (KM)", Int64.Type}, {"State", type text}, {"Ethnicity", type text}, {"Education", Int64.Type}, {"EducationField", type text}, {"JobRole", type text}, {"MaritalStatus", type text}, {"Salary", Int64.Type}, {"StockOptionLevel", Int64.Type}, {"OverTime", type text}, {"HireDate", type date}, {"Attrition", type text}, {"YearsAtCompany", Int64.Type}, {"YearsInMostRecentRole", Int64.Type}, {"YearsSinceLastPromotion", Int64.Type}, {"YearsWithCurrManager", Int64.Type}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"EmployeeID", type text}, {"FirstName", type text}, {"LastName", type text}, {"Gender", type text}, {"Age", Int64.Type}, {"BusinessTravel", type text}, {"Department", type text}, {"DistanceFromHome (KM)", Int64.Type}, {"State", type text}, {"Ethnicity", type text}, {"Education", Int64.Type}, {"EducationField", type text}, {"JobRole", type text}, {"MaritalStatus", type text}, {"Salary", Int64.Type}, {"StockOptionLevel", Int64.Type}, {"OverTime", type text}, {"HireDate", type date}, {"Attrition", type text}, {"YearsAtCompany", Int64.Type}, {"YearsInMostRecentRole", Int64.Type}, {"YearsSinceLastPromotion", Int64.Type}, {"YearsWithCurrManager", Int64.Type}}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Changed Type", "AgeBins", each if [Age] > 49 then 50 else if [Age] >= 40 then "40-49" else if [Age] >= 30 then "30-39" else if [Age] >= 20 then "20-29" else if [Age] < 20 then 20 else "Other"),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Conditional Column",{{"AgeBins", type text}})
 				in
-				    #"Changed Type"
+				    #"Changed Type1"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 
