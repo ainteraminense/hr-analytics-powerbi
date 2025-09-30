@@ -205,6 +205,14 @@ table DimEmployee
 
 		annotation SummarizationSetBy = Automatic
 
+	column FullName =
+			
+			DimEmployee[FirstName] & " " & DimEmployee[LastName]
+		lineageTag: ae11fcd6-37fe-4a98-b50d-bcfa4b58085c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition DimEmployee-dc909116-9259-4343-958c-d8340731fa8f = m
 		mode: import
 		source =
