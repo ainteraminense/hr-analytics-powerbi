@@ -37,6 +37,19 @@ table _Measures
 		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: 8f7e706c-c1ba-417b-b77b-887fd8f21ef5
 
+	measure LastReviewDate =
+			
+			COALESCE(
+			    FORMAT(
+			        MAX(
+			            FactPerformanceRating[ReviewDate]
+			        ),
+			        "mm/dd/yyyy"
+			    ),
+			    "No Review Has Happened"
+			)
+		lineageTag: 7b0526b5-328c-4ed2-8cde-525b52c78032
+
 	column Column
 		formatString: 0
 		lineageTag: 1fe70466-bcf3-4f6e-9ed2-2a0f4d61103c
