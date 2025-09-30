@@ -50,6 +50,30 @@ table _Measures
 			)
 		lineageTag: 7b0526b5-328c-4ed2-8cde-525b52c78032
 
+	measure NextReviewDate = ```
+			
+			VAR reviewDate = 
+			IF(
+			    [LastReviewDate] = "No Review Has Happened",
+			    MIN(
+			        DimEmployee[HireDate]
+			    ),
+			    [LastReviewDate]
+			)
+			VAR reviewDateFormat = 
+			FORMAT(
+			    reviewDate,
+			    "mm/dd/yyyy"
+			)
+			
+			RETURN
+			FORMAT(
+			    reviewDateFormat + 365,
+			    "mm/dd/yyyy"
+			)
+			```
+		lineageTag: 3ef0454d-60a1-4044-9a9e-41b4bc40ceca
+
 	column Column
 		formatString: 0
 		lineageTag: 1fe70466-bcf3-4f6e-9ed2-2a0f4d61103c
