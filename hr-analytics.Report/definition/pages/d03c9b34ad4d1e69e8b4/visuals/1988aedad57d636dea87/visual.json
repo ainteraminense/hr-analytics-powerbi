@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "a7248b80c4a0089c97bb",
+  "name": "1988aedad57d636dea87",
   "position": {
-    "x": 464,
-    "y": 288,
-    "z": 3001,
+    "x": 288,
+    "y": 0,
+    "z": 3002,
     "height": 272,
-    "width": 352,
-    "tabOrder": 3001
+    "width": 816,
+    "tabOrder": 3002
   },
   "visual": {
-    "visualType": "pieChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,11 +23,11 @@
                       "Entity": "DimEmployee"
                     }
                   },
-                  "Property": "MaritalStatus"
+                  "Property": "Ethnicity"
                 }
               },
-              "queryRef": "DimEmployee.MaritalStatus",
-              "nativeQueryRef": "MaritalStatus",
+              "queryRef": "DimEmployee.Ethnicity",
+              "nativeQueryRef": "Ethnicity",
               "active": true
             }
           ]
@@ -42,11 +42,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "TotalEmployees"
+                  "Property": "AverageSalary"
                 }
               },
-              "queryRef": "_Measures.TotalEmployees",
-              "nativeQueryRef": "TotalEmployees"
+              "queryRef": "_Measures.AverageSalary",
+              "nativeQueryRef": "AverageSalary"
             }
           ]
         }
@@ -55,48 +55,27 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "DimEmployee"
+                    "Entity": "_Measures"
                   }
                 },
-                "Property": "MaritalStatus"
+                "Property": "AverageSalary"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Employees by Marital Status'"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            }
-          }
-        }
-      ]
     },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "0006ef3cd9cc076a9e2a",
+        "name": "37a01a77a4eb581e90b2",
         "field": {
           "Column": {
             "Expression": {
@@ -104,13 +83,13 @@
                 "Entity": "DimEmployee"
               }
             },
-            "Property": "MaritalStatus"
+            "Property": "Ethnicity"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "35a6dde3e2605d60a0ad",
+        "name": "9d8edac401bd1db28a0b",
         "field": {
           "Measure": {
             "Expression": {
@@ -118,7 +97,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "TotalEmployees"
+            "Property": "AverageSalary"
           }
         },
         "type": "Advanced"
