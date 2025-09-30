@@ -1,16 +1,15 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "81200fdd0071cc053b05",
+  "name": "207aeccbd16c4d043008",
   "position": {
-    "x": 648,
-    "y": 0,
-    "z": 1,
-    "height": 456,
-    "width": 576,
-    "tabOrder": 1
+    "x": 624,
+    "y": 464,
+    "z": 6,
+    "height": 256,
+    "width": 320
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -29,24 +28,6 @@
               "queryRef": "DimEmployee.Department",
               "nativeQueryRef": "Department",
               "active": true
-            }
-          ]
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DimEmployee"
-                    }
-                  },
-                  "Property": "JobRole"
-                }
-              },
-              "queryRef": "DimEmployee.JobRole",
-              "nativeQueryRef": "JobRole"
             }
           ]
         },
