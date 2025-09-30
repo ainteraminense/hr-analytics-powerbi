@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "1637a13711e673e857ac",
   "position": {
     "x": 10,
     "y": 570,
-    "z": 2,
+    "z": 2000,
     "height": 150,
     "width": 280,
-    "tabOrder": 2
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "card",
@@ -52,23 +52,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "142594acd4a2d2824809",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "InactiveEmployees"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

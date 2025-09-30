@@ -6,7 +6,8 @@
     "y": 0,
     "z": 0,
     "height": 280,
-    "width": 280
+    "width": 280,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "card",
@@ -51,23 +52,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7c55a655aa90962b6393",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "TotalEmployees"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

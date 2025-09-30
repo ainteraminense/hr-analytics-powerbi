@@ -4,10 +4,10 @@
   "position": {
     "x": 312,
     "y": 288,
-    "z": 4,
+    "z": 4000,
     "height": 280,
     "width": 280,
-    "tabOrder": 4
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "columnChart",
@@ -52,23 +52,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "21dc3bfdf84b2995d883",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "TotalEmployees"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

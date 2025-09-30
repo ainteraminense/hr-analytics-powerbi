@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "207aeccbd16c4d043008",
+  "name": "255924bdc5663d77480a",
   "position": {
-    "x": 624,
-    "y": 464,
-    "z": 6000,
-    "height": 256,
-    "width": 320,
-    "tabOrder": 7000
+    "x": 560,
+    "y": 288,
+    "z": 3000,
+    "height": 288,
+    "width": 464,
+    "tabOrder": 3000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,12 +23,30 @@
                       "Entity": "DimEmployee"
                     }
                   },
-                  "Property": "Department"
+                  "Property": "AgeBins"
                 }
               },
-              "queryRef": "DimEmployee.Department",
-              "nativeQueryRef": "Department",
+              "queryRef": "DimEmployee.AgeBins",
+              "nativeQueryRef": "AgeBins",
               "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimEmployee"
+                    }
+                  },
+                  "Property": "Gender"
+                }
+              },
+              "queryRef": "DimEmployee.Gender",
+              "nativeQueryRef": "Gender"
             }
           ]
         },
@@ -42,11 +60,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "ActiveEmployees"
+                  "Property": "TotalEmployees"
                 }
               },
-              "queryRef": "_Measures.ActiveEmployees",
-              "nativeQueryRef": "ActiveEmployees"
+              "queryRef": "_Measures.TotalEmployees",
+              "nativeQueryRef": "TotalEmployees"
             }
           ]
         }
@@ -61,7 +79,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "ActiveEmployees"
+                "Property": "TotalEmployees"
               }
             },
             "direction": "Descending"
@@ -77,7 +95,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Active Employees by Department'"
+                  "Value": "'Employees by Age and Gender'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
                 }
               }
             }
