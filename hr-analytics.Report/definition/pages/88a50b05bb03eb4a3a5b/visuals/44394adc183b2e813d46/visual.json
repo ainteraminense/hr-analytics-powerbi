@@ -32,6 +32,24 @@
             }
           ]
         },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimEmployee"
+                    }
+                  },
+                  "Property": "JobRole"
+                }
+              },
+              "queryRef": "DimEmployee.JobRole",
+              "nativeQueryRef": "JobRole"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -98,6 +116,20 @@
               }
             },
             "Property": "Department"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "15a14317a8918bd020b6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimEmployee"
+              }
+            },
+            "Property": "JobRole"
           }
         },
         "type": "Categorical"
