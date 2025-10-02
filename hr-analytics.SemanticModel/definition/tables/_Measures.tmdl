@@ -124,6 +124,34 @@ table _Measures
 		formatString: 0
 		lineageTag: 28a568d0-85d8-4a4f-87eb-1072ddbae8b9
 
+	measure SelfRating =
+			
+			CALCULATE(
+			    MAX(
+			        FactPerformanceRating[SelfRating]
+			    ),
+			    USERELATIONSHIP(
+			        FactPerformanceRating[SelfRating],
+			        DimRatingLevel[RatingID]
+			    )
+			)
+		formatString: 0
+		lineageTag: 9b598811-2cc4-4599-8f5e-0d813e84bdef
+
+	measure ManagrRating =
+			
+			CALCULATE(
+			    MAX(
+			        FactPerformanceRating[ManagerRating]
+			    ),
+			    USERELATIONSHIP(
+			        FactPerformanceRating[ManagerRating],
+			        DimRatingLevel[RatingID]
+			    )
+			)
+		formatString: 0
+		lineageTag: 18613264-c81f-4438-84c0-688a723ca5d1
+
 	column Column
 		formatString: 0
 		lineageTag: 1fe70466-bcf3-4f6e-9ed2-2a0f4d61103c
