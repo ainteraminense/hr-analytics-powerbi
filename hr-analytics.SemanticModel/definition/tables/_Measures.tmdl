@@ -86,7 +86,7 @@ table _Measures
 			
 			CALCULATE(
 			    MAX(
-			        FactPerformanceRating[JobSatisfaction]
+			        FactPerformanceRating[EnvironmentSatisfaction]
 			    ),
 			    USERELATIONSHIP(
 			        FactPerformanceRating[EnvironmentSatisfaction],
@@ -100,7 +100,7 @@ table _Measures
 			
 			CALCULATE(
 			    MAX(
-			        FactPerformanceRating[JobSatisfaction]
+			        FactPerformanceRating[RelationshipSatisfaction]
 			    ),
 			    USERELATIONSHIP(
 			        FactPerformanceRating[RelationshipSatisfaction],
@@ -114,7 +114,7 @@ table _Measures
 			
 			CALCULATE(
 			    MAX(
-			        FactPerformanceRating[JobSatisfaction]
+			        FactPerformanceRating[WorkLifeBalance]
 			    ),
 			    USERELATIONSHIP(
 			        FactPerformanceRating[WorkLifeBalance],
