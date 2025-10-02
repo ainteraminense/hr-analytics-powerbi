@@ -152,6 +152,24 @@ table _Measures
 		formatString: 0
 		lineageTag: 18613264-c81f-4438-84c0-688a723ca5d1
 
+	measure InactiveEmployeesDate =
+			
+			CALCULATE(
+			    [InactiveEmployees],
+			    USERELATIONSHIP(
+			        DimEmployee[HireDate],
+			        DimDate[Date]
+			    )
+			)
+		formatString: 0
+		lineageTag: ad759c08-901e-4fbe-9baf-bde6ab2c39a6
+
+	measure '% Attrition Rate Date' =
+			
+			DIVIDE([InactiveEmployeesDate], [TotalEmployeesDate])
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: ee63ca39-81ac-4b41-bb82-af3f4d55a88d
+
 	column Column
 		formatString: 0
 		lineageTag: 1fe70466-bcf3-4f6e-9ed2-2a0f4d61103c

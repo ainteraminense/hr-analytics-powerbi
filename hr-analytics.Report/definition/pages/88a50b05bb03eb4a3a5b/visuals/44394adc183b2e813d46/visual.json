@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "44394adc183b2e813d46",
+  "position": {
+    "x": 8,
+    "y": 288,
+    "z": 1,
+    "height": 280,
+    "width": 432,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimEmployee"
+                    }
+                  },
+                  "Property": "Department"
+                }
+              },
+              "queryRef": "DimEmployee.Department",
+              "nativeQueryRef": "Department",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "% Attrition Rate"
+                }
+              },
+              "queryRef": "_Measures.% Attrition Rate",
+              "nativeQueryRef": "% Attrition Rate"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "% Attrition Rate"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c250bd25504a2c6a2932",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "% Attrition Rate"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e7d2fd7b8054698aa19e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimEmployee"
+              }
+            },
+            "Property": "Department"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
