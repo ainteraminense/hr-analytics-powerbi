@@ -74,6 +74,56 @@ table _Measures
 			```
 		lineageTag: 3ef0454d-60a1-4044-9a9e-41b4bc40ceca
 
+	measure 'Job Satisfaction' =
+			
+			MAX(
+			    FactPerformanceRating[JobSatisfaction]
+			)
+		formatString: 0
+		lineageTag: ab735e33-c482-489b-aa7d-b9575323da06
+
+	measure EvironmentSatisfaction =
+			
+			CALCULATE(
+			    MAX(
+			        FactPerformanceRating[JobSatisfaction]
+			    ),
+			    USERELATIONSHIP(
+			        FactPerformanceRating[EnvironmentSatisfaction],
+			        DimSatisfiedLevel[SatisfactionID]
+			    )
+			)
+		formatString: 0
+		lineageTag: 0782b407-8253-42ec-8b68-64ffb5e68104
+
+	measure RelationshipSatisfaction =
+			
+			CALCULATE(
+			    MAX(
+			        FactPerformanceRating[JobSatisfaction]
+			    ),
+			    USERELATIONSHIP(
+			        FactPerformanceRating[RelationshipSatisfaction],
+			        DimSatisfiedLevel[SatisfactionID]
+			    )
+			)
+		formatString: 0
+		lineageTag: e368208a-f891-4952-8079-0582b9e2e6c2
+
+	measure WorkLifeBalance =
+			
+			CALCULATE(
+			    MAX(
+			        FactPerformanceRating[JobSatisfaction]
+			    ),
+			    USERELATIONSHIP(
+			        FactPerformanceRating[WorkLifeBalance],
+			        DimSatisfiedLevel[SatisfactionID]
+			    )
+			)
+		formatString: 0
+		lineageTag: 28a568d0-85d8-4a4f-87eb-1072ddbae8b9
+
 	column Column
 		formatString: 0
 		lineageTag: 1fe70466-bcf3-4f6e-9ed2-2a0f4d61103c
