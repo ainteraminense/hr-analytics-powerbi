@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "44394adc183b2e813d46",
+  "name": "de4209d932065552c7e1",
   "position": {
-    "x": 16,
+    "x": 874,
     "y": 288,
-    "z": 1,
+    "z": 5,
     "height": 272,
-    "width": 800,
-    "tabOrder": 1
+    "width": 406,
+    "tabOrder": 5
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -23,30 +23,12 @@
                       "Entity": "DimEmployee"
                     }
                   },
-                  "Property": "Department"
+                  "Property": "YearsAtCompany"
                 }
               },
-              "queryRef": "DimEmployee.Department",
-              "nativeQueryRef": "Department",
+              "queryRef": "DimEmployee.YearsAtCompany",
+              "nativeQueryRef": "YearsAtCompany",
               "active": true
-            }
-          ]
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DimEmployee"
-                    }
-                  },
-                  "Property": "JobRole"
-                }
-              },
-              "queryRef": "DimEmployee.JobRole",
-              "nativeQueryRef": "JobRole"
             }
           ]
         },
@@ -88,12 +70,34 @@
         "isDefaultSort": true
       }
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Attritition by Tenure'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "c250bd25504a2c6a2932",
+        "name": "1b1e4950004045504750",
         "field": {
           "Measure": {
             "Expression": {
@@ -107,7 +111,7 @@
         "type": "Advanced"
       },
       {
-        "name": "e7d2fd7b8054698aa19e",
+        "name": "c5438a319a3c4b9ca287",
         "field": {
           "Column": {
             "Expression": {
@@ -115,24 +119,10 @@
                 "Entity": "DimEmployee"
               }
             },
-            "Property": "Department"
+            "Property": "YearsAtCompany"
           }
         },
-        "type": "Categorical"
-      },
-      {
-        "name": "15a14317a8918bd020b6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimEmployee"
-              }
-            },
-            "Property": "JobRole"
-          }
-        },
-        "type": "Categorical"
+        "type": "Advanced"
       }
     ]
   }
