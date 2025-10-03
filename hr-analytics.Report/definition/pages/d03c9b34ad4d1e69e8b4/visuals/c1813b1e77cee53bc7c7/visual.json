@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "c1813b1e77cee53bc7c7",
   "position": {
-    "x": 10,
-    "y": 0,
+    "x": 16,
+    "y": 112,
     "z": 0,
-    "height": 280,
-    "width": 280
+    "height": 160,
+    "width": 272
   },
   "visual": {
     "visualType": "card",
@@ -105,5 +105,28 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "765986c3147e0710906e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DimEmployee"
+                  }
+                },
+                "Property": "Age"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
