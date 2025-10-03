@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "9e912a124b41ee00169d",
   "position": {
-    "x": 576,
+    "x": 560,
     "y": 0,
     "z": 8,
     "height": 48,
-    "width": 704,
+    "width": 720,
     "tabOrder": 8
   },
   "visual": {
@@ -19,11 +19,18 @@
               {
                 "textRuns": [
                   {
-                    "value": "Overview",
+                    "value": "Attrition",
                     "textStyle": {
                       "fontSize": "18pt",
                       "color": "#03ef62"
                     }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               }
