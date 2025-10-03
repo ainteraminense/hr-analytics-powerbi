@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "1988aedad57d636dea87",
   "position": {
-    "x": 624,
-    "y": 336,
+    "x": 656,
+    "y": 416,
     "z": 3002,
-    "height": 272,
-    "width": 656,
+    "height": 288,
+    "width": 608,
     "tabOrder": 3002
   },
   "visual": {
@@ -69,6 +69,21 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
