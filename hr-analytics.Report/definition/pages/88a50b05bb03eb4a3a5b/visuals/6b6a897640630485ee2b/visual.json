@@ -80,6 +80,13 @@
                   "Value": "'Attrition by Overtime Requirement'"
                 }
               }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
             }
           }
         }
