@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "44394adc183b2e813d46",
+  "name": "86352d5f80c82031e4a2",
   "position": {
-    "x": 16,
-    "y": 288,
-    "z": 1,
-    "height": 272,
-    "width": 800,
-    "tabOrder": 1
+    "x": 288,
+    "y": 0,
+    "z": 3,
+    "height": 280,
+    "width": 576,
+    "tabOrder": 3
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "scatterChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,34 +23,16 @@
                       "Entity": "DimEmployee"
                     }
                   },
-                  "Property": "Department"
+                  "Property": "BusinessTravel"
                 }
               },
-              "queryRef": "DimEmployee.Department",
-              "nativeQueryRef": "Department",
+              "queryRef": "DimEmployee.BusinessTravel",
+              "nativeQueryRef": "BusinessTravel",
               "active": true
             }
           ]
         },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DimEmployee"
-                    }
-                  },
-                  "Property": "JobRole"
-                }
-              },
-              "queryRef": "DimEmployee.JobRole",
-              "nativeQueryRef": "JobRole"
-            }
-          ]
-        },
-        "Y": {
+        "X": {
           "projections": [
             {
               "field": {
@@ -64,36 +46,73 @@
                 }
               },
               "queryRef": "_Measures.% Attrition Rate",
-              "nativeQueryRef": "% Attrition Rate"
+              "nativeQueryRef": "% Attrition Rate",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "TotalEmployees"
+                }
+              },
+              "queryRef": "_Measures.TotalEmployees",
+              "nativeQueryRef": "TotalEmployees"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Measures"
-                  }
-                },
-                "Property": "% Attrition Rate"
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Attrition by Travel Frequency'"
+                }
               }
             },
-            "direction": "Descending"
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
           }
-        ],
-        "isDefaultSort": true
-      }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "c250bd25504a2c6a2932",
+        "name": "d38c90481d31ae578248",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "TotalEmployees"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "64e290b9edd697b4b803",
         "field": {
           "Measure": {
             "Expression": {
@@ -107,7 +126,7 @@
         "type": "Advanced"
       },
       {
-        "name": "e7d2fd7b8054698aa19e",
+        "name": "297a080c5c9c9d7e7b77",
         "field": {
           "Column": {
             "Expression": {
@@ -115,21 +134,7 @@
                 "Entity": "DimEmployee"
               }
             },
-            "Property": "Department"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "15a14317a8918bd020b6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimEmployee"
-              }
-            },
-            "Property": "JobRole"
+            "Property": "BusinessTravel"
           }
         },
         "type": "Categorical"

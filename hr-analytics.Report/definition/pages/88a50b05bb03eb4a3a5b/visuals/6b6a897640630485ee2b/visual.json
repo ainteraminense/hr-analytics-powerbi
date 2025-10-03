@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "44394adc183b2e813d46",
+  "name": "6b6a897640630485ee2b",
   "position": {
-    "x": 16,
-    "y": 288,
-    "z": 1,
-    "height": 272,
-    "width": 800,
-    "tabOrder": 1
+    "x": 874,
+    "y": 0,
+    "z": 4,
+    "height": 280,
+    "width": 406,
+    "tabOrder": 4
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "pieChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,30 +23,12 @@
                       "Entity": "DimEmployee"
                     }
                   },
-                  "Property": "Department"
+                  "Property": "OverTime"
                 }
               },
-              "queryRef": "DimEmployee.Department",
-              "nativeQueryRef": "Department",
+              "queryRef": "DimEmployee.OverTime",
+              "nativeQueryRef": "OverTime",
               "active": true
-            }
-          ]
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DimEmployee"
-                    }
-                  },
-                  "Property": "JobRole"
-                }
-              },
-              "queryRef": "DimEmployee.JobRole",
-              "nativeQueryRef": "JobRole"
             }
           ]
         },
@@ -88,12 +70,41 @@
         "isDefaultSort": true
       }
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Attrition by Overtime Requirement'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "c250bd25504a2c6a2932",
+        "name": "be51fade1509b20a4907",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimEmployee"
+              }
+            },
+            "Property": "OverTime"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2a27daa8e1b252d0d33b",
         "field": {
           "Measure": {
             "Expression": {
@@ -105,34 +116,6 @@
           }
         },
         "type": "Advanced"
-      },
-      {
-        "name": "e7d2fd7b8054698aa19e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimEmployee"
-              }
-            },
-            "Property": "Department"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "15a14317a8918bd020b6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimEmployee"
-              }
-            },
-            "Property": "JobRole"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }
