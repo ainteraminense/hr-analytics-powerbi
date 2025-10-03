@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "9f2bebe3242b073e271e",
   "position": {
-    "x": 576,
+    "x": 544,
     "y": 0,
     "z": 13,
     "height": 48,
-    "width": 704,
+    "width": 736,
     "tabOrder": 13
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Overview",
+                    "value": "Performance Tracker",
                     "textStyle": {
                       "fontSize": "18pt",
                       "color": "#03ef62"
