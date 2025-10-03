@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "dd057259481eeeb2d2b8",
   "position": {
-    "x": 10,
-    "y": 290,
+    "x": 16,
+    "y": 48,
     "z": 1000,
-    "height": 280,
-    "width": 280
+    "height": 144,
+    "width": 272
   },
   "visual": {
     "visualType": "card",
@@ -51,5 +51,23 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cb0425c9b897652a3900",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "ActiveEmployees"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -3,10 +3,10 @@
   "name": "5cbd76fd29b20d90be11",
   "position": {
     "x": 16,
-    "y": 288,
+    "y": 224,
     "z": 2000,
-    "height": 288,
-    "width": 464,
+    "height": 224,
+    "width": 624,
     "tabOrder": 2000
   },
   "visual": {
@@ -76,7 +76,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Employees by Age'"
+                  "Value": "'Total Employees by Age'"
                 }
               }
             },

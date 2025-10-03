@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "7eeec07d1d9befef1164",
   "position": {
-    "x": 300,
-    "y": 0,
+    "x": 960,
+    "y": 48,
     "z": 3000,
-    "height": 280,
-    "width": 280,
+    "height": 144,
+    "width": 304,
     "tabOrder": 2000
   },
   "visual": {
@@ -52,5 +52,23 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0707625200dbdcdbedc8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "% Attrition Rate"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "a4efcd3340510540653b",
   "position": {
-    "x": 10,
-    "y": 0,
+    "x": 16,
+    "y": 80,
     "z": 0,
-    "height": 280,
-    "width": 280
+    "height": 192,
+    "width": 272
   },
   "visual": {
     "visualType": "slicer",
@@ -96,44 +96,6 @@
                 "Literal": {
                   "Value": "true"
                 }
-              }
-            },
-            "selfFilter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "d",
-                    "Entity": "DimEmployee",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "Contains": {
-                        "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "d"
-                              }
-                            },
-                            "Property": "FullName"
-                          }
-                        },
-                        "Right": {
-                          "Literal": {
-                            "Value": "'este'"
-                          }
-                        }
-                      }
-                    },
-                    "Annotations": {
-                      "PowerBI.MParameterBehavior": 1
-                    }
-                  }
-                ]
               }
             }
           }

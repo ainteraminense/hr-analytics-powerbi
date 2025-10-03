@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "5a77c85e997a34d06df7",
   "position": {
-    "x": 10,
-    "y": 0,
+    "x": 640,
+    "y": 48,
     "z": 0,
-    "height": 280,
-    "width": 280,
+    "height": 144,
+    "width": 288,
     "tabOrder": 6000
   },
   "visual": {
@@ -52,5 +52,23 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2bfef4ff006287677a46",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "TotalEmployees"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

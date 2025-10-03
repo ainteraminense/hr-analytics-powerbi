@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "1ab8046e26ab5241dd07",
   "position": {
-    "x": 944.00000000000011,
-    "y": 464,
+    "x": 16,
+    "y": 480,
     "z": 7000,
-    "height": 256,
-    "width": 336,
+    "height": 240,
+    "width": 1248,
     "tabOrder": 5000
   },
   "visual": {
@@ -95,7 +95,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Active Employees by Department'"
+                  "Value": "'Active Employees by Department and Job Role'"
                 }
               }
             }
@@ -104,5 +104,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6dd00a69e7b908c44bb5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimEmployee"
+              }
+            },
+            "Property": "Department"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "93c2ef885eec91273507",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimEmployee"
+              }
+            },
+            "Property": "JobRole"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ca51ca31c79084036575",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "ActiveEmployees"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
