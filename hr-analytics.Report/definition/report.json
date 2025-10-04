@@ -9,6 +9,15 @@
         "page": "1.3.65"
       },
       "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "HR_Analytics0013379867227307773.json",
+      "reportVersionAtImport": {
+        "visual": "2.1.0",
+        "report": "2.1.0",
+        "page": "2.0.0"
+      },
+      "type": "RegisteredResources"
     }
   },
   "filterConfig": {
@@ -70,6 +79,17 @@
           "name": "CY21SU11",
           "path": "BaseThemes/CY21SU11.json",
           "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "HR_Analytics0013379867227307773.json",
+          "path": "HR_Analytics0013379867227307773.json",
+          "type": "CustomTheme"
         }
       ]
     }
