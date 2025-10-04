@@ -1,0 +1,53 @@
+{
+  "name": "HR Analytics",
+  "dataColors": [
+    "#00C74E",
+    "#65FF8F",
+    "#03EF62",
+    "#05192D",
+    "#05192D",
+    "#303969",
+    "#00D99B",
+    "#A8D644"
+  ],
+  "textClasses": {
+    "label": {
+      "fontFace": "'Segoe UI Semibold', wf_segoe-ui_semibold, helvetica, arial, sans-serif",
+      "fontSize": 10
+    },
+    "callout": {
+      "fontFace": "'Segoe UI Semibold', wf_segoe-ui_semibold, helvetica, arial, sans-serif",
+      "fontSize": 36
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#05192D"
+              }
+            },
+            "transparency": 90
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 100
+          }
+        ]
+      }
+    }
+  }
+}
