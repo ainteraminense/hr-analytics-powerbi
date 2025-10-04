@@ -19,9 +19,16 @@
               {
                 "textRuns": [
                   {
-                    "value": "AtlastLabs",
+                    "value": "AtlastLabs - ",
                     "textStyle": {
                       "fontSize": "20pt",
+                      "color": "#03ef62"
+                    }
+                  },
+                  {
+                    "value": "Overview",
+                    "textStyle": {
+                      "fontSize": "18pt",
                       "color": "#03ef62"
                     }
                   }
